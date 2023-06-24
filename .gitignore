@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-Github/pikachu/[Ll]ibrary/
-Github/pikachu/[Tt]emp/
-Github/pikachu/[Oo]bj/
-Github/pikachu/[Bb]uild/
-Github/pikachu/[Bb]uilds/
-Github/pikachu/[Ll]ogs/
-Github/pikachu/[Uu]serSettings/
+pikachu/[Ll]ibrary/
+pikachu/[Tt]emp/
+pikachu/[Oo]bj/
+pikachu/[Bb]uild/
+pikachu/[Bb]uilds/
+pikachu/[Ll]ogs/
+pikachu/[Uu]serSettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
