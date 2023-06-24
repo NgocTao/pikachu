@@ -87,12 +87,4 @@ public static class C
         public static int TimeCheckAfterComplete = 5;
     }
 
-    public static class GridConfig
-    {
-        public static int Column = 12;
-        public static int Row = 7;
-        public static float SpaceX = 0.35f;
-        public static float SpaceY = 0.45f;
-    }
-
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using StormStudio.Common.UI;
 using DG.Tweening;
+using System;
 
 public interface IGameController
 {
@@ -39,12 +40,29 @@ public class GameplayController : MonoBehaviour, IGameController
         _playerController.Setup(this);
 
         // UI Controlers
-        // _playUI = UIManager.Instance.ShowUIOnTop<PlayUI>("PlayUI");
-        // _playUI.Setup();
+        _playUI = UIManager.Instance.ShowUIOnTop<PlayUI>("PlayUI");
+        _playUI.Setup(onHint, onArrangeBoard, onChangeTheme);
 
         //Setup Grid
         _gridSystem.Setup();
         _pathFinder = new ShortestPathFinder();
+    }
+
+    private void onChangeTheme()
+    {
+        Debug.Log("On Touched Change Theme");
+    }
+
+    private void onArrangeBoard()
+    {
+        Debug.Log("On Touched Arrange Board");
+
+    }
+
+    private void onHint()
+    {
+        Debug.Log("On Touched Hint");
+
     }
 
     public void CheckMatching(List<Cell> cells)

@@ -14,7 +14,6 @@ public class GridSystem : MonoBehaviour
     [SerializeField] Vector2 _space;
     [SerializeField] Transform _prefabTile;
 
-    [SerializeField] ModelData _modeData;
     PlayUI _playUI;
     List<Cell> _cells = new List<Cell>();
     List<Vector2Int> _allPositions = new List<Vector2Int>();
@@ -53,7 +52,8 @@ public class GridSystem : MonoBehaviour
             {
                 var tile = _poolTiles.Get();
                 tile.SetParent(_prefabTile.parent);
-                tile.transform.position = new Vector3(-width * 0.5f + _tileSize.x * 0.5f + c * (_tileSize.x + _space.x), -height * 0.5f + _tileSize.y * 0.5f + r * (_tileSize.y + _space.y), 0f);
+
+                tile.transform.position = new Vector3(-width * 0.5f + _tileSize.x * 0.5f + c * (_tileSize.x + _space.x), -height * 0.5f + _tileSize.y * 0.5f + r * (_tileSize.y + _space.y) - 0.5f, 0f);
                 _mapTiles.Add(r * _boardSize.x + c, tile);
             }
         }
@@ -91,7 +91,7 @@ public class GridSystem : MonoBehaviour
         foreach (var cellData in _dataCells)
         {
             if (cellData == null) continue;
-            var cell = _poolCells.Get();
+            var cell = _poolCells.Get();    
             cell.transform.SetParent(_prefabCell.transform.parent);
             cell.Setup(ThemeManager.Instance.GetSpriteByID(cellData.ID), cellData.ID);
             cell.SetPos(cellData.Row, cellData.Column);
@@ -166,21 +166,6 @@ public class GridSystem : MonoBehaviour
         foreach (var cell in moveCells)
         {
             Debug.Log("Reload " + cell.Pos + " ID " + cell.ID);
-        }
-    }
-
-    public void LoadLevel()
-    {
-        while (_allPositions.Count > 0)
-        {
-            var pos1 = RandomlySelectPositions();
-            var pos2 = RandomlySelectPositions();
-            var indexItem = Random.Range(0, 19);
-            foreach (var cell in _cells)
-            {
-                if (cell.Pos == pos1 || cell.Pos == pos2)
-                    cell.Setup(_modeData.Cells[indexItem].Sprite, _modeData.Cells[indexItem].ID);
-            }
         }
     }
 

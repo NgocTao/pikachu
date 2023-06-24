@@ -94,7 +94,7 @@ public partial class GameFlow : MonoBehaviour
         // LoadNotification();
 
         // Start game state machine
-        _gsMachine.Init(OnStateChanged, GameState.Gameplay);
+        _gsMachine.Init(OnStateChanged, GameState.Init);
         SoundManager.Instance.OnEnableMusic += onEnableMusic;
         while (true)
         {

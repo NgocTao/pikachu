@@ -11,18 +11,28 @@ using DG.Tweening;
 public class PlayUI : UIController
 {
 
-    System.Action _onStartGame;
-    void Awake()
+    System.Action _onHint;
+    System.Action _onArrangeBoard;
+    System.Action _onChangeTheme;
+
+    public void Setup(System.Action onHint, System.Action onArrangeBoard, System.Action onChangeTheme)
     {
+        _onHint = onHint;
+        _onArrangeBoard = onArrangeBoard;
+        _onChangeTheme = onChangeTheme;
     }
 
-    public void Setup()
+    public void TouchedHint()
     {
+        _onHint?.Invoke();
     }
-
-    public void TouchedStartGame()
+    public void TouchedArragneBoard()
     {
-        _onStartGame?.Invoke();
+        _onArrangeBoard?.Invoke();
+    }
+    public void TouchedChangeTheme()
+    {
+        _onChangeTheme?.Invoke();
     }
 
     protected override void OnUIRemoved()

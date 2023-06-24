@@ -69,7 +69,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f3b49164be80a48b9bc85235115b64ff, type: 3}
   - {fileID: 21300000, guid: a9e3c9f4b57e2954482bd5a278bbe0f5, type: 3}
   - {fileID: 21300000, guid: 0dfb132588e0fa44f9ae2cbedc35638a, type: 3}
-  - {fileID: 21300000, guid: 73d2c6257a5dc934eb053043fba13c20, type: 3}
   - {fileID: 21300000, guid: 2a8228656bc292949a3beed2aad534ee, type: 3}
   - {fileID: 21300000, guid: ecd37f65b72c21042be745ef91cd7078, type: 3}
   - {fileID: 21300000, guid: d89ce0854f3bb8f4ea5245251b64c47f, type: 3}
@@ -132,7 +131,6 @@ SpriteAtlas:
   - img_piggy
   - ic_watchad
   - img_pointer
-  - board_inside
   - time_bar
   - btn_orange
   - ic_coin_checkpoint
