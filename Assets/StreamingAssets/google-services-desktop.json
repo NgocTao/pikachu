@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "920565078850",
+    "project_id": "match-triple-3d-66bc1",
+    "storage_bucket": "match-triple-3d-66bc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920565078850:android:b778358e0784da9b2906db",
+        "android_client_info": {
+          "package_name": "com.game.matchtriple3d"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920565078850-eucit7b5d5ekmkbj9pvoafe9sqpj9jej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsUdSKq17262prdQOZ3cVTKVCIyFwTaS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920565078850-eucit7b5d5ekmkbj9pvoafe9sqpj9jej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
