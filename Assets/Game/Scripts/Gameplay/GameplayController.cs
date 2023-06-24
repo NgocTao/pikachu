@@ -41,11 +41,15 @@ public class GameplayController : MonoBehaviour, IGameController
 
         // UI Controlers
         _playUI = UIManager.Instance.ShowUIOnTop<PlayUI>("PlayUI");
-        _playUI.Setup(onHint, onArrangeBoard, onChangeTheme);
+        _playUI.Setup(onHint, onArrangeBoard, onChangeTheme, overTime);
 
         //Setup Grid
         _gridSystem.Setup();
         _pathFinder = new ShortestPathFinder();
+    }
+    private void overTime(bool isOver)
+    {
+        _isOver = isOver;
     }
 
     private void onChangeTheme()
